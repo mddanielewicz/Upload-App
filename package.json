@@ -1,0 +1,19 @@
+{
+  "name": "mean-upload",
+  "version": "1.0.0",
+  "description": "basic upload ",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ozumii/Upload-App.git"
+  },
+  "author": "Ryan, Matthew, Malachi, Michele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ozumii/Upload-App/issues"
+  },
+  "homepage": "https://github.com/Ozumii/Upload-App#readme"
+}

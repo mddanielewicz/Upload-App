@@ -1,14 +1,12 @@
-<html lang="en" ng-app='uploadApp'>
-    <head>
-      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        
+<html lang="en">
+    <head>    
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">  
         <link rel="stylesheet" href="css/main.css" type="text/css"/>
         
         <title>Bootstrap Test Page</title>
     </head>
-<body ng-controller='indexController'>
+<body ng-app='uploadApp'>
         <!-- navbar -->
 <nav class="navbar navbar-light bg-faded navbar-fixed-top">
     <div class="container">
@@ -101,11 +99,13 @@
     </div><!--about-->
     <!-- Whose working on the project -->
     <hr>
-    <h1 class="display-4 text-xs-center m-y-3">Individuals Working on this project</h1>
-    <div class="contributers" ng-repeat="bio in bios">
-      <h3 class="col-lg-3" ng-bind='bio.name'></h3>
-      <p ng-bind='bio.bioText'></p>
-      <a href='{{bio.githubLink}}' ng-bind='bio.githubUsername'></a>
+    <h1 class="display-4 text-xs-center m-y-3" >Individuals Working on this project</h1>
+    <div class="contributers-wraper" ng-controller='indexCtrl' ng-cloak>
+      <div class="contributers" ng-repeat='bio in bios'>
+        <h3 class="col-lg-3">{[{bio.name}]}</h3>
+        <p>{[{bio.text}]}</p>
+        <a href={[{bio.githubLink}]} target="_blank">{[{bio.githubUsername}]}</a>
+      </div>
     </div>
   </ul>
     <hr>
@@ -119,6 +119,8 @@
         <input type="file" id="file"  name = "files[]" onchange = "startRead()"><input>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/ozu.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="/js/app.js" type="text/javascript"></script>
+    <script src="/js/controllers/index.js" type="text/javascript"></script>
+    <script src="/js/ozu.js" type="text/javascript"></script>
 </html>

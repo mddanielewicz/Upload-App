@@ -2,6 +2,25 @@
 
 angular.module('uploadApp')
 .controller('indexCtrl', function($scope) {
+ $scope.projectLang = [
+   {
+     name: 'MongoDB',
+     url: 'https://docs.mongodb.com/manual/'
+   },{
+     name: 'ExpressJS',
+     url: 'https://expressjs.com/'
+   },{
+     name: 'AngularJS',
+     url: 'https://angularjs.org/'
+   },{
+     name: 'NodeJS',
+     url: 'https://nodejs.org/en/'
+   },{
+     name: 'GridFS',
+     url: 'https://docs.mongodb.com/manual/core/gridfs/'
+   }
+ ];
+  
   $scope.bios = [
      {
       "name": "Malachi Danielewicz",

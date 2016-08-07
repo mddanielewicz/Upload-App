@@ -11,6 +11,10 @@ a {
   color: #00B7FF;
 }
 
+hr {
+  clear: both;
+}
+
 .contributers {
   height: 200px;
   float: left;

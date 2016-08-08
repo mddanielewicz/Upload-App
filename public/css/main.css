@@ -1,0 +1,40 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+ }
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+hr {
+  clear: both;
+}
+
+.contributers {
+  height: 200px;
+  float: left;
+}
+
+.contributers h3 {
+  width: 100%;
+  height: 30px;
+  padding:0 15px
+}
+.contributers p {
+  width: 100%;
+  height: 30px;
+  padding: 0 15px;
+  margin-top: 35px;
+}
+
+.contributers a {
+  width: 100%;
+  height: 30px;
+  padding: 0 15px;
+  margin-top: 35px
+}

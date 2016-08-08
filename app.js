@@ -5,7 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cons = require('consolidate');
-//var mongoose = require('mongoose');
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/uploadApp');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -13,7 +15,7 @@ var users = require('./routes/users');
 var app = express();
 
 //connect to Mongo
-//var db = ('mongod://localhost:27017/uploadApp');
+
 
 // view engine setup
 app.engine('html', cons.swig)
@@ -27,6 +29,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next){
+  req.db = db;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
